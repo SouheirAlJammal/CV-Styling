@@ -1,3 +1,204 @@
-body{
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    font-weight: 500;
+}
+
+header {
+    background-color: rgb(147, 143, 143);
+    height: 20%;
+width: 100%;
+}
+
+header>div>hgroup {
+    color: red;
+}
+
+header>div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 10%;
+}
+
+
+.content {
+    margin: auto;
+    padding: 8%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+#contact>h3 {
+    display: none;
+}
+
+section{
+    width: 100%;
+}
+
+h3::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     background-color: red;
+    margin-right: 5px;
+}
+
+section>h3 {
+    padding: 10px;
+    border-bottom: 2px solid rgb(184, 180, 180);
+}
+
+.skill {
+  background-color: rgb(198, 187, 187);
+margin: 3px;
+padding: 5px;
+}
+
+.skill span{
+    padding: 2px;
+    background-color: red;
+    display: block;
+    flex-direction: column;
+color: white;
+}
+
+
+.skills-primary::before {
+    content: "Main";
+    margin-top: 10px;
+}
+
+
+.skills-secondary::before {
+    content: "Other";
+    margin-top: 10px;
+
+}
+
+.skill[data-skill="1"] span {
+    width: 10%;
+}
+
+.skill[data-skill="3"] span {
+    width: 30%;
+}
+
+.skill[data-skill="5"] span{
+    width: 40%;
+}
+
+.skill[data-skill="7"] span{
+    width: 50%;
+}
+
+[data-skill="9"]  span{
+    width: 90%;
+}
+
+.skills-secondary{
+    opacity: 0.8;
+}
+.contact {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    margin: 0;
+    gap: 0;
+}
+
+.contact-type {
+    color: white;
+    background-color: red;
+    margin: 0;
+    padding: 1px;
+
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+.experience h4 {
+    color: red;
+    margin-bottom: 3px;
+  }
+  
+  .experience-details {
+    color:rgb(191, 183, 183);
+    margin-left: 10px;
+  }
+  
+  .experience-type {
+    font-weight: bold;
+  }
+  
+  .experience-institution {
+    font-weight: normal;
+  }
+  
+  .experience-institution::before {
+    content: "@ ";
+  }
+  
+  .experience-location::before {
+    content: "In";
+  }
+  
+  .experience-date::before {
+    content: " on ";
+  }
+  
+  .experience-date-separator {
+    color: red;
+  }
+
+@media only screen and (max-width:960px) {
+    .content {
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+margin: auto;
+    }
+    .section {
+        margin: 0;
+    }
+
+    header>div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+}
+
+@media only screen and (width>960px) {
+
+
+    #contact {
+        padding: 0;
+        position: absolute;
+        width: 40%;
+        top: 3%;
+        right: 0%;
+        z-index: 1;
+    }
+
+
+    #contact>h3 {
+        position: absolute;
+    }
+
+    .contact-value {
+        background-color: black;
+        margin: 0;
+        padding: 1px;
+
+    }
 }
